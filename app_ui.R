@@ -5,9 +5,13 @@ page_intro <- tabPanel(
   "Introduction",
   titlePanel("Archaeology in Film: Unessay"),
   HTML("<strong>Jade D'Souza</strong> <br>
-       Hi! Welcome to my application that I've made in 
+       Hi! Welcome to my application that I've made using 
        HTML & R. I thought it would be fun to make little Madlibs for the
        themes that we've explored in class, using code. <br>
+       I decided to touch upon 3 of the most prevalent themes in my opinion: <br>
+       1) Danger being released through archaeology <br>  
+       2) Cultural Difference <br>
+       3) Non progress <br>
        This application is 
        interactive. Do keep in mind that the first MadLib that will pop up
        on the screen is a default, but will change depending on choices of
@@ -23,21 +27,21 @@ page_intro <- tabPanel(
 
 
 page_one <- tabPanel(
-  "Dangers of Archy",
-  titlePanel("Dangers 2.0"),
+  "Dangers through Archaeology",
+  titlePanel("Dangers released through Archaeology, MadLib 1"),
   sidebarLayout(
   sidebarPanel(
     selectInput(
-      inputId = "emission_variable",
+      inputId = "DoAC1",
       label = "first choice",
       choices = list("horrible", "worst")
     ),
     selectInput(
-      inputId = "sort_variable",
+      inputId = "DoAC2",
       label = "second choice",
       choices = list("gorgeous", "incredible")
     ),
-    HTML("im noping this works")
+    HTML("im hoping this works")
 
   ), mainPanel(
       tableOutput("table")
@@ -45,6 +49,71 @@ page_one <- tabPanel(
   )
 )
 
+page_two <- tabPanel(
+  "Cultural Differences",
+  titlePanel("Cultural Differences, MadLib 2"),
+  sidebarLayout(
+    sidebarPanel(
+      selectInput(
+        inputId = "CD1",
+        label = "first choice",
+        choices = list("horrible", "worst")
+      ),
+      selectInput(
+        inputId = "CD2",
+        label = "second choice",
+        choices = list("gorgeous", "incredible")
+      ),
+      selectInput(
+        inputId = "CD3",
+        label = "second choice",
+        choices = list("gorgeous", "incredible")
+      ),
+      selectInput(
+        inputId = "CD4",
+        label = "second choice",
+        choices = list("gorgeous", "incredible")
+      ),
+      HTML("im hoping this works")
+      
+    ), mainPanel(
+      tableOutput("CulturalDiff")
+    )
+  )
+)
+
+page_three <- tabPanel(
+  "Non-progress",
+  titlePanel("Non-Progress, MadLib 3"),
+  sidebarLayout(
+    sidebarPanel(
+      selectInput(
+        inputId = "NP1",
+        label = "first choice",
+        choices = list("horrible", "worst")
+      ),
+      selectInput(
+        inputId = "NP2",
+        label = "second choice",
+        choices = list("gorgeous", "incredible")
+      ),
+      selectInput(
+        inputId = "NP3",
+        label = "second choice",
+        choices = list("gorgeous", "incredible")
+      ),
+      selectInput(
+        inputId = "NP4",
+        label = "second choice",
+        choices = list("gorgeous", "incredible")
+      ),
+      HTML("im hoping this works")
+      
+    ), mainPanel(
+      tableOutput("NonProg")
+    )
+  )
+)
 
 page_summary <- tabPanel(
   "Summary",
@@ -96,5 +165,7 @@ app_ui <- navbarPage(
   "Final Project",
   page_intro,
   page_one,
+  page_two,
+  page_three,
   page_summary
 )
