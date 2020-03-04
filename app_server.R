@@ -10,11 +10,13 @@ source("./scripts/table.R")
 app_server <- function(input, output) {
 
   output$table <- renderUI({
-    return(table(input$DoAC1, input$DoAC2))
+    return(table(input$DoAC1, input$DoAC2, input$DoAC3, input$DoAC4, 
+                 input$DoAC5, input$DoAC6,input$DoAC7, input$DoAC8))
   })
   
   output$CulturalDiff <- renderUI({
-    return(pie_sources_emissions(input$CD1, input$CD2, input$CD3, input$CD4))
+    return(pie_sources_emissions(input$CD1, input$CD2, input$CD3, input$CD4,
+                                 input$CD5, input$CD6))
   })
   
   output$NonProg <- renderUI({

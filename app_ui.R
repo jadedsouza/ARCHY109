@@ -6,7 +6,7 @@ page_intro <- tabPanel(
   titlePanel("Archaeology in Film: Unessay"),
   HTML("<strong>Jade D'Souza</strong> <br>
        Hi! Welcome to my application that I've made using 
-       HTML & R. I thought it would be fun to make little Madlibs for the
+       HTML & R. I thought it would be fun to make Madlibs of 6-8 sentences for the
        themes that we've explored in class, using code. <br>
        I decided to touch upon 3 of the most prevalent themes in my opinion: <br>
        1) Danger being released through archaeology <br>  
@@ -34,16 +34,47 @@ page_one <- tabPanel(
     selectInput(
       inputId = "DoAC1",
       label = "first choice",
-      choices = list("horrible", "worst")
+      choices = list("is.", "is not.", "can be.", "can’t be.")
     ),
     selectInput(
       inputId = "DoAC2",
       label = "second choice",
-      choices = list("gorgeous", "incredible")
+      choices = list("loot", "carefully analyze", "record data", "damage")
     ),
-    HTML("im hoping this works")
-
-  ), mainPanel(
+    selectInput(
+      inputId = "DoAC3",
+      label = "third choice",
+      choices = list("artifacts", "tombs", "indigenous sites", "bones")
+    ),
+    selectInput(
+      inputId = "DoAC4",
+      label = "fourth choice",
+      choices = list("deserts.", "humid environments.", "warzones.", "the titanic.")
+    ),
+    selectInput(
+      inputId = "DoAC5",
+      label = "fifth choice",
+      choices = list("absurd", "accurate", "humorous", "smart")
+    ),
+    selectInput(
+      inputId = "DoAC6",
+      label = "sixth choice",
+      choices = list("destroy worlds.", "discover inaccuracies in previous beliefs.")
+    ),
+    selectInput(
+      inputId = "DoAC7",
+      label = "seventh choice",
+      choices = list("One Million Years B.C.", 
+                     "Planet of the Apes.", "Stargate", "The Body")
+    ),
+    selectInput(
+      inputId = "DoAC8",
+      label = "adjective",
+      choices = list("exceptionally", 
+                     "not very", "really", "not usually")
+    )
+  ), mainPanel(img(src = "test.jpg", width = "800px", height = "400px",
+                               align = "bottom"),
       tableOutput("table")
     )
   )
@@ -57,26 +88,35 @@ page_two <- tabPanel(
       selectInput(
         inputId = "CD1",
         label = "first choice",
-        choices = list("horrible", "worst")
+        choices = list("different worlds.", "calling apes smelly.", "social hierarchy.")
       ),
       selectInput(
         inputId = "CD2",
         label = "second choice",
-        choices = list("gorgeous", "incredible")
+        choices = list("Stargate", "One Million Years B.C.", "The Mummy")
       ),
       selectInput(
         inputId = "CD3",
         label = "second choice",
-        choices = list("gorgeous", "incredible")
+        choices = list("boring", "exciting")
       ),
       selectInput(
         inputId = "CD4",
         label = "second choice",
-        choices = list("gorgeous", "incredible")
+        choices = list("Planet of the Apes.", "The Body.")
       ),
-      HTML("im hoping this works")
-      
-    ), mainPanel(
+      selectInput(
+        inputId = "CD5",
+        label = "second choice",
+        choices = list("intelligent.", "beautiful.", "quirky.", "ignorant.")
+      ),
+      selectInput(
+        inputId = "CD6",
+        label = "second choice",
+        choices = list("decades.", "aeons.", "not very long.")
+      )
+    ), mainPanel(img(src = "CDiff.gif", width = "800px", height = "400px",
+                     align = "bottom"),
       tableOutput("CulturalDiff")
     )
   )
