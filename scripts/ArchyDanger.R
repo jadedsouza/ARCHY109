@@ -3,7 +3,7 @@ library(dplyr)
 library(tidyr)
 
 
-table <- function(c1, c2, c3, c4, c5, c6, c7, c8) {
+ArchyDanger <- function(c1, c2, c3, c4, c5, c6, c7, c8) {
 print(paste("Do you think Archaeology is dangerous? To me, it" 
             ,c1,"Archaeologists usually", c2, c3, "when they visit different 
             countries outside of their own. The job can be dangerous if you’re doing 

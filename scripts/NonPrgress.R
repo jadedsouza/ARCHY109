@@ -1,7 +1,7 @@
 #Non progress
 library(dplyr)
 
-finalmap <- function(c1, c2, c3, c4, c5, c6) {
+NonPrgress <- function(c1, c2, c3, c4, c5, c6) {
   print(paste("The last theme that I think was the most relevant in this class.
               It seemed like the", c1,  
               "theme from the movies we explored. However, religion or ‘prehistoric’

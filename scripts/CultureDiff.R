@@ -2,7 +2,7 @@
 library("plotly")
 library("dplyr")
 
-pie_sources_emissions <- function(c1, c2, c3, c4, c5, c6) {
+CultureDiff <- function(c1, c2, c3, c4, c5, c6) {
 
 print(paste("Cultural differences seem to be apparent everywhere, including 
       the movies in class. This theme was revealed through", c1,

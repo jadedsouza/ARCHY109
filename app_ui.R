@@ -18,7 +18,8 @@ page_intro <- tabPanel(
        words from the panel on your left that you choose to put in!
        <br>
        <br>
-       If you're interested in the code that I wrote, here's my github repository"
+       If you're interested in the code that I wrote, here's my 
+       <a href = 'https://github.com/jadedsouza/ARCHY109'>github repository</a>."
   ),
   mainPanel(
     plotlyOutput("ave_temp_plot")
