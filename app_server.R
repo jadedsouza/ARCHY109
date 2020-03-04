@@ -5,6 +5,9 @@ library(ggplot2)
 
 #load the script
 source("./scripts/table.R")
+source("./scripts/pie_sources_emissions.R")
+source("./scripts/finalmap.R")
+
 
 # create the server
 app_server <- function(input, output) {
