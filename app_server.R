@@ -9,7 +9,7 @@ source("./scripts/table.R")
 # create the server
 app_server <- function(input, output) {
 
-  output$table <- renderUI({
+  output$DoAC <- renderUI({
     return(table(input$DoAC1, input$DoAC2, input$DoAC3, input$DoAC4, 
                  input$DoAC5, input$DoAC6,input$DoAC7, input$DoAC8))
   })
@@ -20,6 +20,7 @@ app_server <- function(input, output) {
   })
   
   output$NonProg <- renderUI({
-    return(finalmap(input$NP1, input$NP2, input$NP3, input$NP4))
+    return(finalmap(input$NP1, input$NP2, input$NP3, input$NP4, input$NP5,
+                    input$NP6))
   })
 }
